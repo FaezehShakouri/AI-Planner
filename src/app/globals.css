@@ -24,3 +24,58 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Remove or comment out these lines that are causing the error:
+.delay-[${delay}s] {
+  transition-delay: ${delay}s;
+}
+.duration-[${duration}s] {
+  --tw-duration: ${duration}s;
+}
+*/
+
+/* Add your custom styles here instead */
+.animate-bounce-1 {
+  animation: bounce 1s infinite;
+  animation-delay: 0s;
+}
+
+.animate-bounce-2 {
+  animation: bounce 1s infinite;
+  animation-delay: 0.15s;
+}
+
+.animate-bounce-3 {
+  animation: bounce 1s infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Add any other custom styles you need */
